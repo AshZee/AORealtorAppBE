@@ -61,12 +61,14 @@ class hashMap {
     this.hash(line);
   }
   find(zipCode){
-    let zipCode = parseInt(zipCode);
+    zipCode = parseInt(zipCode);
     let found = false;
     let index = zipCode % this.hashSize;
+    // console.log(this.hashedArray[index].slice(0,5))
     while(!found){
         if(this.hashedArray[index].slice(0,5) == zipCode.toString()){
-            found == true;
+            console.log("It was found");
+            found = true;
             break;
         }
         else{
@@ -98,4 +100,6 @@ fs.readFile("mlsProperties.txt", (err, data) => {
   linesOfFile = data.toString().split("\n");
   let hm = new hashMap(linesOfFile);
   hm.print();
+  console.log(hm.find(75053));
+  // make sure to finish the resize method
 });

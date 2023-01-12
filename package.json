@@ -10,7 +10,7 @@
     "filereader": "^0.10.3",
     "fs": "^0.0.1-security",
     "mysqli": "^3.1.4",
-    "nodemon": "^2.0.16",
+    "nodemon": "^2.0.20",
     "tedious": "^14.0.0",
     "xhr2": "^0.2.1"
   },
